@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e8b8cc9-680b-4665-8c04-26ae05785596" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/game_factory.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/user_factory.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/game_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/support/factory_bot.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/support/shoulda_helpers.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/games.coffee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/games.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/games_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/games_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/games/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/games/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/games/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/controllers/games_controller_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/helpers/games_helper_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/game.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/game.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -31,7 +36,8 @@
     <SUITE FILE_PATH="coverage/pingpong_master_regalli@Run_spec__game_spec___pingpong_master_regalli.rcov" NAME="Run spec 'game_spec': pingpong-master-regalli Coverage Results" MODIFIED="1537573618906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="pingpong-master-regalli" />
     <SUITE FILE_PATH="coverage/pingpong_master_regalli@All_tests_in_spec__pingpong_master_regalli.rcov" NAME="All tests in spec: pingpong-master-regalli Coverage Results" MODIFIED="1537569962609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="pingpong-master-regalli" />
     <SUITE FILE_PATH="coverage/pingpong_master_regalli@Game_when_score_is_incorrect_should_return_error_by_point_difference__pingpong_master_regalli.rcov" NAME="Game when score is incorrect should return error by point difference: pingpong-master-regalli Coverage Results" MODIFIED="1537572065345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="pingpong-master-regalli" />
-    <SUITE FILE_PATH="coverage/pingpong_master_regalli@Development__pingpong_master_regalli.rcov" NAME="Development: pingpong-master-regalli Coverage Results" MODIFIED="1537565206433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="pingpong-master-regalli" />
+    <SUITE FILE_PATH="coverage/pingpong_master_regalli@Production__pingpong_master_regalli.rcov" NAME="Production: pingpong-master-regalli Coverage Results" MODIFIED="1537574371997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="pingpong-master-regalli" />
+    <SUITE FILE_PATH="coverage/pingpong_master_regalli@Development__pingpong_master_regalli.rcov" NAME="Development: pingpong-master-regalli Coverage Results" MODIFIED="1537574527497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="pingpong-master-regalli" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -87,57 +93,74 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Gemfile" value="2" />
+          <entry key="Gemfile" value="3" />
+          <entry key="css" value="1" />
+          <entry key="erb" value="7" />
+          <entry key="games" value="2" />
           <entry key="md" value="2" />
-          <entry key="rb" value="46" />
+          <entry key="rb" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CSS" value="1" />
+          <entry key="Database Element" value="2" />
           <entry key="Markdown" value="2" />
-          <entry key="Ruby" value="48" />
+          <entry key="RHTML" value="7" />
+          <entry key="Ruby" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Gemfile" value="27" />
-          <entry key="rb" value="1594" />
-          <entry key="txt" value="14" />
+          <entry key="erb" value="52" />
+          <entry key="rb" value="1960" />
+          <entry key="txt" value="63" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Ruby" value="1621" />
+          <entry key="PLAIN_TEXT" value="63" />
+          <entry key="RHTML" value="52" />
+          <entry key="Ruby" value="1987" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spec/models/game_spec.rb">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/games/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="35" column="63" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
+            <state relative-caret-position="240">
+              <caret line="16" column="71" lean-forward="true" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/game.rb">
+        <entry file="das://7203dfb9-377f-4fdc-b181-d8c9979a2349/schema/main/table/games">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20180921213056_create_games.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/games_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.10@pingpong-master-regalli/gems/rspec-core-3.8.0/lib/rspec/core/example_group.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="261" selection-start-line="261" selection-end-line="261" />
+              <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -148,7 +171,13 @@
     <findStrings>
       <find>mail</find>
       <find>Rspec.configu</find>
+      <find>require_</find>
+      <find>require devise_bootstrap_views</find>
+      <find>user</find>
     </findStrings>
+    <replaceStrings>
+      <replace>player_score</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -158,13 +187,20 @@
       <list>
         <option value="$PROJECT_DIR$/db/migrate/20180921213056_create_games.rb" />
         <option value="$PROJECT_DIR$/spec/factories/company_factory.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/spec/rails_helper.rb" />
         <option value="$PROJECT_DIR$/spec/factories/game_factory.rb" />
         <option value="$PROJECT_DIR$/spec/factories/user_factory.rb" />
-        <option value="$PROJECT_DIR$/app/models/game.rb" />
         <option value="$PROJECT_DIR$/spec/models/game_spec.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/views/games/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/game.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/games_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/games/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/games_controller.rb" />
       </list>
     </option>
   </component>
@@ -210,47 +246,34 @@
               <item name="pingpong-master-regalli" type="b2602c69:ProjectViewProjectNode" />
               <item name="pingpong-master-regalli" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pingpong-master-regalli" type="b2602c69:ProjectViewProjectNode" />
               <item name="pingpong-master-regalli" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pingpong-master-regalli" type="b2602c69:ProjectViewProjectNode" />
               <item name="pingpong-master-regalli" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="games" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pingpong-master-regalli" type="b2602c69:ProjectViewProjectNode" />
               <item name="pingpong-master-regalli" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-              <item name="migrate" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pingpong-master-regalli" type="b2602c69:ProjectViewProjectNode" />
               <item name="pingpong-master-regalli" type="462c0819:PsiDirectoryNode" />
-              <item name="spec" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pingpong-master-regalli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pingpong-master-regalli" type="462c0819:PsiDirectoryNode" />
-              <item name="spec" type="462c0819:PsiDirectoryNode" />
-              <item name="factories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pingpong-master-regalli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pingpong-master-regalli" type="462c0819:PsiDirectoryNode" />
-              <item name="spec" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pingpong-master-regalli" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pingpong-master-regalli" type="462c0819:PsiDirectoryNode" />
-              <item name="spec" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -260,8 +283,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlite" />
-    <property name="SearchEverywhereHistoryKey" value="game_spe&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/spec/models/game_spec.rb&#10;gamefacto&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/spec/factories/game_factory.rb&#10;user&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/spec/factories/user_factory.rb&#10;user_fac&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/spec/factories/user_factory.rb&#10;helper&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/spec/rails_helper.rb&#10;rails&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/spec/rails_helper.rb&#10;game&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/app/models/game.rb&#10;gem&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/Gemfile&#10;create_&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/db/migrate/20180921213056_create_games.rb&#10;readme&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/README.md&#10;create&#9;null&#9;null&#10;gemfi&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/Gemfile" />
+    <property name="SearchEverywhereHistoryKey" value="gamescon&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/app/controllers/games_controller.rb&#10;create&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/db/migrate/20180921213056_create_games.rb&#10;_form&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/app/views/games/_form.html.erb&#10;show&#9;FILE&#9;file:///Users/jimlu/.rvm/gems/ruby-2.2.10@pingpong-master-regalli/gems/railties-4.2.3/lib/rails/generators/erb/scaffold/templates/show.html.erb&#10;contro&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/app/controllers/games_controller.rb&#10;routes&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/config/routes.rb&#10;gem&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/Gemfile&#10;game_spe&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/spec/models/game_spec.rb&#10;gamefacto&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/spec/factories/game_factory.rb&#10;user&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/spec/factories/user_factory.rb&#10;user_fac&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/spec/factories/user_factory.rb&#10;helper&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/spec/rails_helper.rb&#10;rails&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/spec/rails_helper.rb&#10;game&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/app/models/game.rb&#10;create_&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/db/migrate/20180921213056_create_games.rb&#10;readme&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/README.md&#10;gemfi&#9;FILE&#9;file:///Users/jimlu/RubymineProjects/pingpong-master-regalli/Gemfile" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -269,6 +293,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/games" />
       <recent name="$PROJECT_DIR$/spec" />
       <recent name="$PROJECT_DIR$/spec/factories" />
     </key>
@@ -285,7 +310,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="RSpec.Run spec 'game_spec': pingpong-master-regalli">
+  <component name="RunManager" selected="Rails.Development: pingpong-master-regalli">
     <configuration name="Game when score is incorrect should return error by point difference: pingpong-master-regalli" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="pingpong-master-regalli" />
@@ -576,7 +601,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537563686494</updated>
-      <workItem from="1537563687994" duration="9667000" />
+      <workItem from="1537563687994" duration="12650000" />
     </task>
     <task id="LOCAL-00001" summary="Init challenge">
       <created>1537564270736</created>
@@ -585,7 +610,21 @@
       <option name="project" value="LOCAL" />
       <updated>1537564270737</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Created model game and tests">
+      <created>1537573694979</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1537573694979</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Created model game and tests">
+      <created>1537573751509</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1537573751509</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -621,33 +660,59 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9667000" />
+    <option name="totallyTimeSpent" value="12650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.24964234" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" weight="0.32945737" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32945737" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32945737" />
       <window_info anchor="bottom" id="Messages" order="4" weight="0.32945737" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32945737" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.32945737" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.32945737" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.39922482" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="right" id="Database" order="0" visible="true" weight="0.3297568" />
+      <window_info anchor="right" id="Database" order="0" weight="0.3297568" />
       <window_info anchor="right" id="Mongo Explorer" order="1" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24964234" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.32945737" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32945737" />
+      <window_info anchor="bottom" id="Database Changes" order="2" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="4" weight="0.32945737" />
+      <window_info anchor="bottom" id="Messages" order="5" weight="0.32945737" />
+      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32945737" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.32945737" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.39922482" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="right" id="Database" order="0" visible="true" weight="0.3297568" />
+      <window_info anchor="right" id="Mongo Explorer" order="1" />
+      <window_info anchor="right" id="Commander" order="2" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -657,7 +722,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init challenge" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init challenge" />
+    <MESSAGE value="Created model game and tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created model game and tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -720,13 +786,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180921213056_create_games.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -745,13 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="21" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -785,13 +837,6 @@
     <entry file="file://$PROJECT_DIR$/spec/support/factory_bot.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.10@pingpong-master-regalli/gems/rspec-support-3.8.0/lib/rspec/support.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -823,6 +868,13 @@
     <entry file="file://$PROJECT_DIR$/spec/factories/user_factory.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/game_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.10@pingpong-master-regalli/gems/rspec-core-3.8.0/lib/rspec/core/example_group.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
@@ -830,17 +882,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/game.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="135">
+          <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/game_spec.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/games/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="35" column="63" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/games/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/games_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="49" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/game.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="57" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.10@pingpong-master-regalli/gems/railties-4.2.3/lib/rails/generators/erb/scaffold/templates/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="48" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://7203dfb9-377f-4fdc-b181-d8c9979a2349/schema/main/table/games">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180921213056_create_games.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/games/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="71" lean-forward="true" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/games_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
         </state>
       </provider>
     </entry>

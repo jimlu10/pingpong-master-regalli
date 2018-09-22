@@ -25,7 +25,6 @@ gem 'turbolinks',   '~> 2.5.3'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'devise',       '~> 3.5.2'
-gem 'devise-bootstrap-views', '~> 1.0'
 
 group :development, :test do
   gem 'byebug'

@@ -8,6 +8,8 @@ class Game < ActiveRecord::Base
   validates_presence_of :player, :opponent
   validate :score
 
+  scope :played_by, ->(player_id) { where('player_id = ? OR opponent_id = ?', player_id, player_id) }
+
   def calculate_result
     self.winner_id = player_score > opponent_score ? player_id : opponent_id
   end
