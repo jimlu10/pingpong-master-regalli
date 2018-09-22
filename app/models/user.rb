@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :trackable, :validatable
 
 
+  include Rating
+
   def username
     email.split('@').first.titleize
   end
@@ -13,4 +15,5 @@ class User < ActiveRecord::Base
   def opponents
     User.where.not(id: id)
   end
+
 end

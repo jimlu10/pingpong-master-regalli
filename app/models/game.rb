@@ -4,6 +4,7 @@ class Game < ActiveRecord::Base
   belongs_to :winner, class_name: 'User'
 
   before_create :calculate_result
+  after_create :update_user
 
   validates_presence_of :player, :opponent
   validate :score
@@ -17,10 +18,15 @@ class Game < ActiveRecord::Base
   def score
     if player_score >= 21 || opponent_score >= 21
       return true if (player_score - opponent_score).abs >= 2
+
       errors.add(:base, 'The winner needs to have a two point difference')
     else
       errors.add(:base, 'The minimun score to have a winner in 21')
     end
     false
+  end
+
+  def update_user
+    player.update_player(self)
   end
 end
